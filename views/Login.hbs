@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/Login.css">
+    <script>
+      document.getElementById('nav2').style.display="none";
+    </script>
+</head>
+<body>
+    <br><br>
+    <form action="/AdminSpaceBase" id="form1" class="form1" method="post">
+   
+      {{#if erreur}}
+    <p style="color: red;">{{erreur}}</p>
+    {{/if}}
+        <label for="text">Email : </label>
+        <input type="email" name="email" id="email" class="IN">
+        <label for="text">Password :</label>
+        <input type="password" id="Pass" name="Pass" class="IN">
+        <button type="submit" class="B"  id="B">Connect</button>
+      
+    </form>  
+</body>
+</html>

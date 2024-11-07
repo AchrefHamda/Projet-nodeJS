@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        document.getElementById('Login').style.display = 'none';
+        document.getElementById('LoginOut').style.display = 'block';
+
+ 
+    </script> 
+    <style>
+      body{
+        background-color: whitesmoke;
+      }
+    </style>
+    <title>Espace Admin</title>
+</head>
+<body>
+  <br><br>
+    <form class="d-flex" role="search" method="post" action="/PostList">
+        <input class="form-control me-2" type="search" placeholder="Search" name="searchPost" aria-label="Search" id="AA">
+        <button class="btn btn-dark" type="submit" id="AA" >Search</button>
+     
+      </form>
+
+  <br><br>
+  
+    {{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+<table class=" table table-secondary ">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Titre</th>
+      <th scope="col">Date</th>
+      <th scope="col">Description</th>
+      <th >Action<br></th>
+    </tr>
+  </thead>
+  <tbody>
+        {{#each Resultat2}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td >{{this.nom_U}}</td>
+      <td>{{this.titre}}</td>
+      <td>{{this.DateP}}</td>
+      <td>{{this.description}}</td>
+      <td >
+      <a href="/viewpost/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye-fill"style="color: rgb(104, 66, 6);"></i>View</a><br><br>
+      <a href="/editpost/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"style="color: blue;"></i> Edit</a><br><br>
+      <a href="/{{this.id}}" type="button" class="btn btn-light btn-small"> <i class="bi bi-person-fill-x"style="color: red;"></i>Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+</body>
+</html>

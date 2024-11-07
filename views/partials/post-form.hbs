@@ -1,0 +1,89 @@
+
+<style>
+*{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+  #form{
+    width: 800px;
+    margin: 20px auto;
+    margin-top: 30px;
+    box-shadow: 0 0 24px white;
+    padding: 50px;
+    background-color: black;
+  }
+  label {
+    display: block;
+    margin-bottom: 9px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  input,textarea {
+  width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  #BF{
+    width: 100%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color:black; 
+    background-color:white; 
+    border: 2px solid #000000; 
+    border-radius: 5px;
+    font-weight: bold;
+  
+  }
+    #BF:hover{
+      background-color: darkred;
+      color: white;
+    }
+    h2{
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+    }
+    h3{
+       font-weight: bold;
+            color: white;
+            text-align: center;
+                        border-radius: 10px;
+
+    }
+</style>
+
+<h2>Add Post</h2>
+   <label for="name">User name :</label>
+    <input type="text" id="UserName" name="UserName" value="{{this.nom_U}}">
+    <label for="text">Photo : </label>
+    <input type="file" name="photo" id="photo" value="{{this.Photo}}" accept="image/*">
+        <label for="name">Title :</label>
+        <input type="text" id="title" name="title" value="{{this.titre}}">
+        <br>
+        <label for="text">Description :</label>
+        <br>
+        <textarea name="Desc" id="Desc" cols="92" rows="5" >
+          {{this.description}}
+        </textarea>
+              <br>
+        <h3>Contact</h3>
+        <br>
+        <label for="text">Tel :</label>
+        <input type="text" name="Tel" id="Tel" value="{{this.Tel}}">
+        <br>
+          <label for="text">email :</label>
+        <input type="email" name="email" id="email" value="{{this.email}}">
+        <br>
+          <label for="text">Ville :</label>
+        <input type="text" name="Ville" id="Ville" value="{{this.Ville}}">
+        <br><br>
+        <button type="submit" id="BF">Post</button>

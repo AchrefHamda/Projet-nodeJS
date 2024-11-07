@@ -1,0 +1,1 @@
+CREATE TABLE `ps`.`admin` (`id` INT NOT NULL AUTO_INCREMENT , `nom` VARCHAR(20) NOT NULL , `prenom` VARCHAR(20) NOT NULL , `nom d'utilisateur` VARCHAR(40) NOT NULL , `tel` INT(8) NOT NULL , `email` VARCHAR(20) NOT NULL , `motdp` INT(20) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

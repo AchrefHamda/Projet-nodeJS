@@ -1,0 +1,23 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('images/a49b88c23fe7bea866d2a1327b688ee6.jpeg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#Card{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+}
+#CardS{
+    background-color: white;
+    color: black; 
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+

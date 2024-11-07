@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ContactClient.css">
+    <title>Contact</title>
+       <script>
+      document.getElementById('nav2').style.display="none";
+    </script>
+</head>
+<body>
+    <style>
+        body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image:url("/css/images/—Pngtree—cat\ and\ dog\ pets\ in_3426222.jpg");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#card {
+    margin-top: 130px;
+    background-color: rgb(209, 206, 52);
+}
+h3{
+    text-align: center;
+}
+    </style>
+</html>
+ {{#each Resultat4}}
+    <div class="card  mb-3" id="card">
+      <div class="card-header"><h3><strong>Contact</strong></h3></div>
+      <div class="card-body" style="margin-left: 50px;">
+        <h5>Name : {{this.nom_U}}</h5>
+        <h5>Tel : {{this.Tel}}</h5>
+        <h5>Email : {{this.email}}</h5>
+        <h5>Ville : {{this.Ville}}</h5>
+      </div>
+    </div>
+  {{/each}}
+
+<br>
+</body>

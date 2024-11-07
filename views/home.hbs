@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/Home.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script>
+    document.getElementById('Search').style.display='block';
+      document.getElementById('nav2').style.display="none";
+  </script>
+  <title>Home</title>
+</head>
+<body>
+
+  <!-- Home  -->
+  <h1 class="H1">Do you want to adopt a pet ? <br> a dog or a cat <br> Welcome to PetPal</h1>   
+  <br> 
+ <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="css/images/BGI4.jpg" class="d-block w-100" id="imag00" alt="...">
+      </div>
+    <div class="carousel-item">
+      <img src="css/images/Cc1.jpg" class="d-block w-100" id="imag00" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="css/images/BGI3.jpg" class="d-block w-100" id="imag00" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br><br>
+{{#each Resultat4}}
+<div class="col">
+    <div class="card h-100" id="C">
+      <div class="card-body">
+        <br>
+        <h5 class="card-title">{{this.nom_U}}</h5>
+        <p >{{this.DateP}}</p>
+      </div>
+      {{#if this.Photo}} 
+            <img class="card__image" src="/css/upload/{{this.Photo}}" alt="Photo">
+            {{else}}
+            <img class="card__image" src="css/default.jpg" alt="Photo">
+      {{/if}}
+      <div class="card-body">
+        <h5 class="card-title">{{this.titre}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <p >Click on the button <strong>Book</strong>  to contact the owner of the offer</p>
+      </div>
+      <a href="ContactClient/{{this.id}}" class="btn" id="btn" >Book</a>
+      <br>
+    </div>
+  </div>
+  <br><br>
+{{/each}}
+
+<!-- Droit -->
+<footer class=" text-white text-center py-3">
+    <p>&copy; 2024 Mon Site Web. Tous droits réservés.</p>
+  </footer> 
+</body>
+</html>
+<!--
+  <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Book</button>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">contact</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <p> {{this.contact}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  -->
